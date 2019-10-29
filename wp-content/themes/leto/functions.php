@@ -99,7 +99,8 @@ function leto_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'leto_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'leto_content_width', 0 );
-
+//Mostrar Añadir al carrito
+add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 /**
  * Register widget area.
  *
